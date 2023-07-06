@@ -37,7 +37,13 @@ const routes = [
     name: 'register',
     component: () => import('../views/RegisterView.vue')
   },
+  {
+    path: '/order',
+    name: 'order',
+    component: () => import('../views/OrderView.vue')
+  },
 ]
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
