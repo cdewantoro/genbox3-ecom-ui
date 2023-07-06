@@ -9,7 +9,7 @@
                 </div>
                 <div class="w-25 d-flex justify-content-end align-items-center" v-if="currentRoute.path === '/cart' || currentRoute.path === '/wishlist' || currentRoute.path === '/profile'">
                     <span class="fs-6 text-light mx-2">User</span>
-                    <span class="material-symbols-outlined fs-2 text-light">account_circle</span>
+                    <router-link to="/profile"><span class="material-symbols-outlined fs-2 text-light">account_circle</span></router-link>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
         </div>
         <div class="bg-light pb-3 px-2 border-bottom" v-show="currentRoute.path === '/cart' || currentRoute.path === '/wishlist' || currentRoute.path === '/profile'">
             <div class="container">
-                <div class="d-flex gap-4 gap-md-0 justify-content-between align-items-center mt-2">
+                <div class="d-flex gap-4 gap-md-0 justify-content-between align-items-center pt-2">
                     <div>
                         <router-link to="/" class="fs-1 fw-bold text-primary">Shop</router-link>
                         <span class="d-none d-md-inline fs-1 fw-lighter text-primary">&nbsp; | &nbsp;</span>

@@ -28,5 +28,9 @@ export default {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
+/* customs rounded for container */
+.rnd-075 {
+    border-radius: 0.75rem;
+}
 
 </style>
