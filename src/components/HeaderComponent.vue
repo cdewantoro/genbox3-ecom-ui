@@ -1,6 +1,6 @@
 <template>
     <header class="fixed-top">
-        <div class="bg-primary py-3 px-2">
+        <div class="bg-primary py-3 px-2" v-show="!(currentRoute.path === '/login' || currentRoute.path === '/register')">
             <div class="container d-flex">
                 <div class="text-light d-flex gap-3 align-items-center w-75">
                     <router-link to="/">Home</router-link> <span class="fw-lighter fs-5">|</span>
@@ -32,11 +32,11 @@
         </div>
         <div class="bg-light pb-3 px-2 border-bottom" v-show="currentRoute.path === '/cart' || currentRoute.path === '/wishlist' || currentRoute.path === '/profile'">
             <div class="container">
-                <div class="d-flex gap-4 gap-md-0 justify-content-between align-items-center mt-2">
+                <div class="d-flex gap-4 gap-md-0 justify-content-between align-items-center pt-2">
                     <div>
                         <router-link to="/" class="fs-1 fw-bold text-primary">Shop</router-link>
                         <span class="d-none d-md-inline fs-1 fw-lighter text-primary">&nbsp; | &nbsp;</span>
-                        <span class="d-none d-md-inline fs-2 fw-light text-primary">{{ currentRoute.name }}</span></div>
+                        <span class="d-none d-md-inline fs-2 fw-normal text-primary">{{ currentRoute.name }}</span></div>
                     <div class="search-bar d-flex justify-content-between bg-light rounded-3 border border-primary"
                         style="width: 60%;">
                         <input type="text" placeholder="Search Wishlist..." />

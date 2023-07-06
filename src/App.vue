@@ -1,6 +1,6 @@
 <template>
     <header-component :currentRoute="$route" />
-  <div class="container" style="margin-top: 170px; border: 1px solid red;">
+  <div class="container" style="border: 1px solid red;">
     <router-view/>
   </div>
   
@@ -24,8 +24,7 @@ export default {
 }
 
 #app {
-  /* display: flex;
-  flex-direction: column; */
+  background-color: #f4f4f4;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
