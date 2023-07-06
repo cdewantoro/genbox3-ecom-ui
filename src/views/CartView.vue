@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 170px;"></div>
+<div style="padding-top: 170px;">
   <div class="shadow p-4 pb-5 mb-5 bg-body ctnCart">
     <h1>This is an cart page</h1>
     <div class="container">
