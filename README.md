@@ -1,4 +1,4 @@
-# genbox3-ecom-ui
+# ecommerce
 
 ## Project setup
 ```
