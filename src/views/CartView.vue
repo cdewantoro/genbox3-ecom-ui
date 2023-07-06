@@ -5,8 +5,8 @@
       <div class="row">
         <div class="col-10">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" v-model="selectAll" @change="toggleAllCheckboxes">
-              <label class="form-check-label" for="flexCheckDefault">All Product</label>
+              <input class="form-check-input" type="checkbox" v-model="selectAll" @change="toggleAllCheckboxes" id="selectAll">
+              <label class="form-check-label" for="selectAll">All Product</label>
             </div>
           </div>
         <div class="col"></div>
@@ -66,6 +66,7 @@ export default {
 <style scoped>
 .ctnCart {
     border-radius: 0.75rem;
+    margin-top: 170px;
 }
 .inline-icon {
   display: inline-flex;
