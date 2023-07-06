@@ -1,12 +1,13 @@
 <template>
-  <div>
+    <div style="padding-top: 170px;"></div>
+  <div class="shadow p-4 pb-5 mb-5 bg-body ctnCart">
     <h1>This is an cart page</h1>
     <div class="container">
       <div class="row">
         <div class="col-10">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" v-model="selectAll" @change="toggleAllCheckboxes" id="selectAll">
-              <label class="form-check-label" for="selectAll">All Product</label>
+              <input class="form-check-input" type="checkbox" v-model="selectAll" @change="toggleAllCheckboxes">
+              <label class="form-check-label" for="flexCheckDefault">All Product</label>
             </div>
           </div>
         <div class="col"></div>
@@ -43,6 +44,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
