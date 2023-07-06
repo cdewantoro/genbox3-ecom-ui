@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <h1>This is an home page</h1>
+  <div style="padding-top: 170px;">
+    <SliderBanner />
   </div>
 </template>
 
 <script>
+import SliderBanner from "@/components/SliderBanner.vue";
 export default {
-  name: 'HomeView'
+  name: 'HomeView',
+  components: { SliderBanner }
 }
 </script>

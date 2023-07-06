@@ -24,8 +24,7 @@ export default {
 }
 
 #app {
-  /* display: flex;
-  flex-direction: column; */
+  background-color: #f4f4f4;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
