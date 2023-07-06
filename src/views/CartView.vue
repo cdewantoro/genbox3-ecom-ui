@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow p-4 pb-5 mb-5 bg-body ctnCart">
+  <div>
     <h1>This is an cart page</h1>
     <div class="container">
       <div class="row">
