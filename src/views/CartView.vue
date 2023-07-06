@@ -1,6 +1,6 @@
 <template>
-  <div style="padding-top: 170px;padding-bottom:100px">
-  <div class="shadow p-4 pb-5 mb-5 bg-body ctnCart">
+  <div style="padding-top: 170px;padding-bottom:100px;">
+  <div class="shadow p-4 pb-5 mb-5 bg-body rnd-075">
     <h1>This is an cart page</h1>
     <div class="container">
       <div class="row">
@@ -98,9 +98,6 @@ export default {
 }
 </script>
 <style scoped>
-.ctnCart {
-    border-radius: 0.75rem;
-}
 .inline-icon {
   display: inline-flex;
   vertical-align: top;
