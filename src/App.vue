@@ -1,6 +1,6 @@
 <template>
     <header-component :currentRoute="$route" />
-      <div class="container" style="margin-top: 170px;">
+      <div class="container">
     <router-view/>
   </div>
   
