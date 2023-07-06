@@ -72,8 +72,10 @@
             </div>
           </div>
       </div>
-
-
+      <div class="pt-4">
+      <input class="btn btn-primary" type="submit" value="Check Out">
+      <input class="btn btn btn-outline-danger mx-3" type="reset" value="Hapus">
+      </div>
     </div>
   </div>
 </div>

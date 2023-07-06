@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-light pb-3 px-2 border-bottom" v-show="currentRoute.path === '/cart' || currentRoute.path === '/wishlist' || currentRoute.path === '/profile'">
+        <div class="bg-light pb-3 px-2 border-bottom" v-show="currentRoute.path === '/cart' || currentRoute.path === '/wishlist' || currentRoute.path === '/profile' || currentRoute.path === '/order'">
             <div class="container">
                 <div class="d-flex gap-4 gap-md-0 justify-content-between align-items-center pt-2">
                     <div>
