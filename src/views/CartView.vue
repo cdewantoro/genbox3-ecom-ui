@@ -1,7 +1,6 @@
 <template>
   <div style="padding-top: 170px;padding-bottom:100px;">
-  <div class="shadow p-4 pb-5 mb-5 bg-body rnd-075">
-    <h1>This is an cart page</h1>
+  <div class="shadow px-3 py-5 mb-5 bg-body rnd-075">
     <div class="container">
       <div class="row">
         <div class="col-10">
@@ -78,7 +77,59 @@
       </div>
     </div>
   </div>
+  <div class="WishlistCtn">
+    <div class="d-flex mb-2">      
+      <h1 class="">Wishlist</h1>
+      <span class="material-symbols-outlined pt-3">fiber_manual_record</span>
+      <span class="material-symbols-outlined pt-3">fiber_manual_record</span>
+      <span class="material-symbols-outlined pt-3">fiber_manual_record</span>
+    </div>
+    <div class="d-flex">
+      <div class="card rnd-075 me-3" style="width: 13rem;">
+        <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Product</h5>
+          <p class="card-text">Rp. 300.000,00</p>
+          <a href="#" class="btn btn-primary px-5 me-3">Beli</a><span class="material-symbols-outlined inline-icon fs-2">favorite</span>
+        </div>
+      </div>
+      <div class="card rnd-075 me-3" style="width: 13rem;">
+        <img src="https://loremflickr.com/100/100" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Product</h5>
+          <p class="card-text">Rp. 300.000,00</p>
+          <a href="#" class="btn btn-primary px-5 me-3">Beli</a><span class="material-symbols-outlined inline-icon fs-2">favorite</span>
+        </div>
+      </div>
+      <div class="card rnd-075 me-3" style="width: 13rem;">
+        <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Product</h5>
+          <p class="card-text">Rp. 300.000,00</p>
+          <a href="#" class="btn btn-primary px-5 me-3">Beli</a><span class="material-symbols-outlined inline-icon fs-2">favorite</span>
+        </div>
+      </div>
+      <div class="card rnd-075 me-3" style="width: 13rem;">
+        <img src="https://loremflickr.com/100/100" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Product</h5>
+          <p class="card-text">Rp. 300.000,00</p>
+          <a href="#" class="btn btn-primary px-5 me-3">Beli</a><span class="material-symbols-outlined inline-icon fs-2">favorite</span>
+        </div>
+      </div>
+      <div class="card rnd-075 me-3" style="width: 13rem;">
+        <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Product</h5>
+          <p class="card-text">Rp. 300.000,00</p>
+          <a href="#" class="btn btn-primary px-5 me-3">Beli</a><span class="material-symbols-outlined inline-icon fs-2">favorite</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
+
 </template>
 
 <script>

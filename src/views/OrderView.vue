@@ -1,7 +1,7 @@
 <template>
   <div style="padding-top: 170px;padding-bottom:100px;">
   <div class="shadow p-4 pb-5 mb-5 bg-body rnd-075">
-    <h1>This is an order page</h1>
+    <h1 class="mb-4">Order Page</h1>
     <div class="container">
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
@@ -20,6 +20,7 @@
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body bg-light">
             <table class="table">
                    <thead>
                     <tr>
@@ -57,6 +58,7 @@
                     </tr>
                   </tfoot>
               </table>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
@@ -75,7 +77,7 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+            <div class="accordion-body bg-light">
               <table class="table">
                    <thead>
                     <tr>
@@ -132,7 +134,7 @@
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+            <div class="accordion-body bg-light">
               <table class="table">
                    <thead>
                     <tr>

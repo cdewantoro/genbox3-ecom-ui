@@ -25,7 +25,7 @@ export default {
 
 #app {
   background-color: #f4f4f4;
-  height: 100vh;
+  /* height: 100vh; */
   font-family: 'Roboto', sans-serif;
 }
 /* customs rounded for container */

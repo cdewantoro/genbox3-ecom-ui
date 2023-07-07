@@ -8,7 +8,7 @@
             </div>
             <div class="col py-3 ps-5 ps-md-3 pe-5">
               <form class="text-center text-md-start">
-                <span class="fw-bold text-primary">Daftar</span>
+                <h4 class="fw-bold text-primary">Daftar</h4>
                 <div class="mb-1 mt-2">
                   <label for="username" class="form-label text-primary">Username</label>
                   <input type="text" class="form-control" id="username" required placeholder="Masukkan username">
