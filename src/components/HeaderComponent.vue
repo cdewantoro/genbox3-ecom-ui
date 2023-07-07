@@ -9,7 +9,7 @@
                 </div>
                 <div class="w-25 d-flex justify-content-end align-items-center" v-if="currentRoute.path === '/cart' || currentRoute.path === '/wishlist' || currentRoute.path === '/profile'">
                     <span class="fs-6 text-light mx-2">User</span>
-                    <span class="material-symbols-outlined fs-2 text-light">account_circle</span>
+                    <router-link to="/profile"><span class="material-symbols-outlined fs-2 text-light">account_circle</span></router-link>
                 </div>
             </div>
         </div>

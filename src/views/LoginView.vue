@@ -1,48 +1,81 @@
 <template>
-  <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-    <div class="container d-flex flex-column align-items-center">
-      <div class="login container d-flex justify-content-center align-items-center">
-        <form>
-          <div class="mb-1">
-            <input type="text" class="form-control border-0" id="username" required placeholder="Masukkan username">
-          </div>
-          <hr>
-          <div class="mb-1">
-            <input type="password" class="form-control border-0" id="password" required placeholder="Masukkan password">
-          </div>
-          <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
-        </form>
+  <div class=" d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+    <div class="position-absolute top-0 start-0 py-4 px-5">
+      <router-link to="/" class="d-flex align-items-center gap-2 text-primary" style="text-decoration: none;" id="back">
+        <span id="icon" class="material-symbols-outlined">keyboard_backspace</span> <span class="fw-bold">Kembali</span>
+      </router-link>
+    </div>
+    <form @submit.prevent="actionLogin()" class="d-flex justify-content-center" style="width: 100%;">
+    <div class="login py-3">
+      <div class="d-flex gap-2 align-items-center text-primary fs-2 fw-bold mx-5 my-3">
+         <span class="material-symbols-outlined fs-2 fw-bold">login</span> <span>Login</span>
       </div>
-      <div class="mt-5">
-        <span class="me-2">Belum punya akun?</span>
-        <router-link to="/register" class="fw-bold">Daftar</router-link>
+      <div class="d-flex flex-column justify-content-center align-items-center h-75 mt-3">
+        <input class="fs-3 text-center text-secondary border-0" style="height: 50px; width: 80%;" type="text"
+          placeholder="Username" v-model="username">
+        <hr>
+        <input class="fs-3 text-center text-secondary border-0" style="height: 50px; width: 80%;" type="password"
+          placeholder="Password" v-model="password">
+        <button type="submit" class="bg-primary text-light fs-4 border-0">Login</button>
       </div>
+    </div>
+    </form>
+    <div class="mt-5">
+      Belum punya akun? <span class="text-primary fw-bold"><router-link to="/register" style="text-decoration: none;">Daftar</router-link></span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LoginView'
+  name: 'LoginView',
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    actionLogin() {
+      console.log(this.username + ',' + this.password);
+    }
+  }
 }
 </script>
 
 <style scoped>
+hr {
+  border: 2px solid;
+  width: 80%;
+}
+
+button {
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
 .login {
-  width: 400px; 
-  height: 400px; 
-  background-color: white; 
+  width: 600px;
+  height: 400px;
+  background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4px 24px 0px rgba(0, 4, 45, 0.15);
-  overflow: hidden;
 }
-hr {
-  height: 2px;;
+
+@media (max-width: 650px) {
+  .login {
+    width: 100%;
+    height: 350px;
+  }
 }
-input {
-  text-align: center;
+
+input:focus {
+  outline: none;
 }
-input::placeholder {
-  text-align: center;
+
+#back:hover #icon {
+  transform: translateX(-10px);
 }
 </style>
