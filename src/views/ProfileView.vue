@@ -13,7 +13,7 @@
             <h2>Profile Saya</h2>
             <h6>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</h6>
             <form>
-              <div class="row mb-3">
+              <div class="row mb-3 pt-3">
                 <label for="inputEmail3" class="col-sm-3 col-form-label">Username</label>
                 <div class="col-sm-8 pt-1 text-black-50">
                   Echo2411
@@ -82,4 +82,5 @@ export default {
 }
 </script>
 <style scoped>
+
 </style>

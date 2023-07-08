@@ -7,7 +7,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed p-2 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              <div class="d-flex col-12 m-0">
+              <div class="d-flex col-12 m-0 pt-2">
                 <div class="col-8 d-flex">
                   <span class="material-symbols-outlined fs-2 inline pe-3">local_shipping</span>
                   <div><h5>Nomor Order : 98398120</h5>
@@ -64,7 +64,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed p-2 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <div class="d-flex col-12 m-0">
+              <div class="d-flex col-12 m-0 pt-2">
                 <div class="col-8 d-flex">
                   <span class="material-symbols-outlined fs-2 inline pe-3">local_shipping</span>
                   <div><h5>Nomor Order : 98398120</h5>
@@ -121,7 +121,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed p-2 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              <div class="d-flex col-12 m-0">
+              <div class="d-flex col-12 m-0 pt-2">
                 <div class="col-8 d-flex">
                   <span class="material-symbols-outlined fs-2 inline pe-3">local_shipping</span>
                   <div><h5>Nomor Order : 98398120</h5>
