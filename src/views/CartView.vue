@@ -26,8 +26,8 @@
             </div>
           </div>
           <div class="col d-flex flex-row-reverse">
-            <div class="align-self-center">
-              <a href="#">Hapus<span class="material-icons inline-icon">&#xe5cd;</span></a>
+            <div class="align-self-center text-primary">
+              <span>Hapus</span> <span class="material-icons inline-icon">&#xe5cd;</span>
             </div>
           </div>
       </div>
@@ -46,8 +46,8 @@
             </div>
           </div>
           <div class="col d-flex flex-row-reverse">
-            <div class="align-self-center">
-              <a href="#">Hapus<span class="material-icons inline-icon">&#xe5cd;</span></a>
+            <div class="align-self-center text-primary">
+              <span>Hapus</span> <span class="material-icons inline-icon">&#xe5cd;</span>
             </div>
           </div>
       </div>
@@ -66,8 +66,8 @@
             </div>
           </div>
           <div class="col d-flex flex-row-reverse">
-            <div class="align-self-center">
-              <a href="#">Hapus<span class="material-icons inline-icon">&#xe5cd;</span></a>
+            <div class="align-self-center text-primary">
+              <span>Hapus</span> <span class="material-icons inline-icon">&#xe5cd;</span>
             </div>
           </div>
       </div>
@@ -155,4 +155,5 @@ export default {
   display: inline-flex;
   vertical-align: top;
 }
+
 </style>
