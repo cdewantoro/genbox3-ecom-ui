@@ -1,22 +1,36 @@
 <template>
-    <div class="slider">
-        <div class="slider-container" :style="sliderContainerStyle">
-            <div class="slider-item" v-for="(item, index) in sliderItems" :key="index">
-                <img :src="item.src" alt="Image" />
+    <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active dot"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" class="dot" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" class="dot" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" style="border-radius: 15px;">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://source.unsplash.com/collection/190727/1245x459" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="@/assets/img/banner.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/collection/190727/1245x459" class="d-block w-100" alt="...">
             </div>
         </div>
-        <div class="nav-left">
-            <button class="slider-prev" @click="prevSlide()"><span class="material-icons">arrow_back_ios</span></button>
-        </div>
-        <div class="slider-nav">
-            <div class="slider-dots">
-                <button v-for="(item, index) in sliderItems" :key="index" @click="showSlide(index)" class="slider-dot"
-                    :class="{ active: index === currentIndex }"></button>
-            </div>
-        </div>
-        <div class="nav-right">
-            <button class="slider-next" @click="nextSlide()"><span class="material-icons">arrow_forward_ios</span></button>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+            <span>&nbsp; </span>
+            <span class="material-symbols-outlined next">
+                arrow_back_ios
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+            <span class="material-symbols-outlined next">
+                arrow_forward_ios
+            </span>
+            <!-- <span class="carousel-control-next-icon fs-6" style="color: black;" aria-hidden="true"></span> -->
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </template>
 <script>
@@ -41,181 +55,42 @@ export default {
                 }
             ],
         }
-    },
-    mounted() {
-        this.startAutoSlide();
-    },
-    methods: {
-        showSlide(index) {
-            this.currentIndex = index;
-            this.sliderContainerStyle = {
-                transform: `translateX(-${this.currentIndex * 100}%)`
-            };
-        },
-        nextSlide() {
-            this.currentIndex = (this.currentIndex + 1) % this.sliderItems.length;
-            this.showSlide(this.currentIndex);
-        },
-        prevSlide() {
-            this.currentIndex = (this.currentIndex + this.sliderItems.length - 1) % this.sliderItems.length;
-            this.showSlide(this.currentIndex);
-        },
-        startAutoSlide() {
-            this.intervalId = setInterval(this.nextSlide, 5000);
-        },
     }
 }
 </script>
 
 <style scoped>
-.slider {
-    position: relative;
-    overflow: hidden;
-    min-height: 400px;
-    border-radius: 20px;
+/* .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+} */
+
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 30px;
 }
 
-.slider-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    height: 100px;
+.carousel-control-next:focus,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    background-color: black;
+    opacity: 0.3;
 }
 
-.slider-item {
-    flex-shrink: 0;
-    width: 100%;
-}
+@media (max-width: 766px) {
 
-.slider-item img {
-    width: 100%;
-}
-
-.slider-nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background: linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.9375) 100%);
-}
-
-.nav-left,
-.nav-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-left {
-    left: 0;
-}
-
-.nav-right {
-    right: 0;
-}
-
-.slider-prev,
-.slider-next {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background: rgba(255, 250, 250, 0.45);
-    color: var(--color-secondary);
-    font-size: 30px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-}
-
-.slider-prev {
-    padding-left: 7px;
-}
-
-.slider-prev:hover,
-.slider-next:hover {
-    opacity: 0.7;
-}
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider-dot {
-    border: 2px solid white;
-    background-color: transparent;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 20px 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.slider-dot.active {
-    background-color: #fff;
-}
-
-@media (max-width: 1200px) {
-    .slider {
-        min-height: 350px;
-    }
-}
-
-@media (max-width: 991px) {
-    .slider {
-        min-height: 260px;
-    }
-}
-
-@media (max-width: 767px) {
-    .slider {
-        min-height: 190px;
-    }
-
-    .slider-prev,
-    .slider-next {
-        height: 20px;
-        width: 20px;
-        background: transparent;
-        color: rgba(255, 250, 250, 0.45);
-    }
-
-    .slider-nav {
-        align-items: center;
-        padding: 0;
-    }
-
-    .slider-dot {
-        border: 1px solid white;
-        width: 9px;
-        height: 9px;
-        margin: 15px 3px;
-    }
-}
-
-@media (max-width: 500px) {
-    .slider {
-        min-height: 140px;
-    }
-
-    .slider-prev,
-    .slider-next {
-        height: 20px;
-        width: 20px;
-        background: transparent;
-        color: rgba(255, 250, 250, 0.45);
+    .carousel-control-next,
+    .carousel-control-prev {
+        opacity: 0;
     }
 }
 </style>
