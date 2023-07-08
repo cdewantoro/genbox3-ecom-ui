@@ -6,8 +6,8 @@
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-4 col-6 d-flex justify-content-center p-3" v-for="product in products" :key="product.id">
+        <div class="row p-1">
+          <div class="col-xl-3 col-lg-4 col-md-4 col-6 d-flex justify-content-center p-1 p-md-3" v-for="product in products" :key="product.id">
             <CardProduct :dataProduct="product" />
             </div>
         </div>
