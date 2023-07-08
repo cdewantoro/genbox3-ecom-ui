@@ -17,9 +17,16 @@
             <div class="container">
                 <div class="d-flex gap-4 gap-md-0 justify-content-between align-items-center pt-2">
                     <div style="width: 20%;"><router-link to="/" class="fs-1 fw-bold">Shop</router-link></div>
-                    <div class="search-bar d-flex justify-content-between bg-light mr-10 rounded-3" style="width: 60%;">
-                        <input type="text" placeholder="Search Product..." />
+                    <div class="position-relative search-bar d-flex justify-content-between bg-light mr-10 rounded-3" style="width: 60%;">
+                        <input v-model="searchValue" v-on:focus="showResult = true" v-on:blur="showResult = false" type="text" placeholder="Cari Produk ..." />
                         <div class="bg-primary rounded-3 d-flex align-items-center px-2 px-md-4 text-light cursor-pointer"><span class="material-icons fs-5">search</span></div>
+                        <div v-show="showResult" class="search-result">
+                            <div v-if="searchValue === ''" class="text-secondary">Ketik untuk mulai mencari produk</div>
+                            <div v-if="searchValue !== ''">
+                                <div class="fw-bold d-flex justify-content-between"><span>{{ searchValue }}</span> <span class="material-symbols-outlined">arrow_right_alt</span></div>
+                                <!-- <hr> -->
+                            </div>
+                        </div>
                     </div>
                     <div class="d-none gap-1 d-md-flex justify-content-end" style="width: 20%;">
                         <router-link to="/cart" class="d-flex align-items-center justify-content-center text-light rounded-3 p-1 bg-primary border border-2 cursor-pointer" style="height: 38px; width: 70px; margin-left: 5px;">
@@ -49,7 +56,15 @@
     </header>
 </template>
 <script>
+import { ref } from 'vue';
+
 export default {
+    data() {
+        return {
+            searchValue: '',
+            showResult: ref(false)
+        }
+    },
     props: {
     currentRoute: {
       type: Object,
@@ -75,6 +90,19 @@ export default {
     width: 100%;
     outline: none;
     border: none;
+}
+
+.search-result {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    width: 100%;
+    /* height: 150px; */
+    border-radius: 10px;
+    background-color: white;
+    /* color: gray; */
+    padding: 20px ;
+    /* display: none; */
 }
 
 a {

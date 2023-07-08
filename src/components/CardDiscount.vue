@@ -5,7 +5,7 @@
         </div>
         <div class="card">
             <img src="https://source.unsplash.com/collection/190727/330x330" class="card-img-top" alt="...">
-            <div class="card-body px-4">
+            <div class="card-body px-3 px-md-4">
                 <h5 class="card-title">{{ dataProduct.name }}</h5>
                 <h5 class="card-text  lh-1"><b>{{ dataProduct.harga }}</b></h5>
                 <p class="text-decoration-line-through text-secondary lh-1">{{ dataProduct.diskon }}</p>
