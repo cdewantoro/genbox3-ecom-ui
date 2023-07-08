@@ -5,7 +5,7 @@
         <span id="icon" class="material-symbols-outlined">keyboard_backspace</span> <span class="fw-bold">Kembali</span>
       </router-link>
     </div>
-    <form @submit.prevent="actionLogin()" class="d-flex justify-content-center" style="width: 100%;">
+    <form @submit.prevent="actionLogin" class="d-flex justify-content-center" style="width: 100%;">
     <div class="login py-3">
       <div class="d-flex gap-2 align-items-center text-primary fs-2 fw-bold mx-5 my-3">
          <span class="material-symbols-outlined fs-2 fw-bold">login</span> <span>Login</span>
@@ -27,17 +27,34 @@
 </template>
 
 <script>
+
 export default {
   name: 'LoginView',
   data() {
     return {
-      username: '',
-      password: ''
+      username: 'admin',
+      password: '123',
     }
   },
   methods: {
     actionLogin() {
-      console.log(this.username + ',' + this.password);
+      const credentials = {
+        username: this.username,
+        pass: this.password
+      };
+      this.$store.dispatch('login', credentials);
+      if (this.isAuth) {
+        console.log(this.token);
+        this.$router.push('/');
+      }
+    }
+  },
+  computed: {
+    isAuth() {
+      return this.$store.state.isAuth
+    },
+    token() {
+      return this.$store.state.token
     }
   }
 }

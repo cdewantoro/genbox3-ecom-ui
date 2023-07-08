@@ -4,13 +4,8 @@ import HomeView from '../views/HomeView.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue')
   },
   {
     path: '/wishlist',
@@ -29,24 +24,40 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'login',
+    name: 'Login',
     component: () => import('../views/LoginView.vue')
   },
   {
     path: '/register',
-    name: 'register',
+    name: 'Register',
     component: () => import('../views/RegisterView.vue')
   },
   {
     path: '/order',
-    name: 'order',
+    name: 'Order',
     component: () => import('../views/OrderView.vue')
   },
 ]
 
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  const token = localStorage.tokenAccess;
+
+  if (typeof token === 'undefined') {
+    if (to.name === 'Cart' || to.name === 'Wishlist' || to.name === 'Profil' || to.name === 'Order') {
+      next({ name: 'Login' });
+    } else {
+      next();
+    }
+  } else if (to.name === 'Login' && typeof token !== 'undefined') {
+    next({ name: 'Home' });
+  }
+  else next()
 })
 
 export default router
