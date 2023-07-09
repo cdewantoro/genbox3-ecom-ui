@@ -6,9 +6,11 @@
                 <h5 class="card-text"><b>{{ dataProduct.harga }}</b></h5>
                 <div class="d-flex align-items-center">
                     <a href="#" class="btn btn-primary" style="width: 60%;">Beli</a>
-                    <span class="material-symbols-outlined fs-1 text-secondary text-center" style="width: 40%;">
-                        favorite
-                    </span>
+                    <div class="d-flex justify-content-center" style="width: 40%;">
+                        <span class="material-symbols-outlined fs-1 text-secondary text-center cursor-pointer" >
+                            favorite
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -48,7 +48,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const token = localStorage.tokenAccess;
 
-  if (typeof token === 'undefined') {
+  if (typeof token === 'undefined' || token === '') {
     if (to.name === 'Cart' || to.name === 'Wishlist' || to.name === 'Profil' || to.name === 'Order') {
       next({ name: 'Login' });
     } else {

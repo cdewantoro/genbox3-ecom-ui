@@ -35,4 +35,8 @@ export default {
     border-radius: 0.75rem;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 </style>
