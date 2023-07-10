@@ -102,9 +102,6 @@ export default {
             required: true
         }
     },
-    mounted() {
-        console.log(this.isAuth);
-    },
     computed: {
         isAuth() {
             return this.$store.state.isAuth;

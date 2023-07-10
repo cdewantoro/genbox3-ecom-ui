@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex';
 
 export default {
   name: 'LoginView',
@@ -43,26 +44,29 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['login']),
     actionLogin() {
       const credentials = {
-        username: this.username,
-        pass: this.password
+        email: this.username,
+        password: this.password
       };
       this.isLoad = true;
-      this.$store.dispatch('login', credentials).then(() => {
+      console.log(this.isLoad);
+      this.login(credentials).then(() => {
         if (this.isAuth) {
           this.$router.push('/');
         }
-        this.isLoad = this.isAuth;
+        this.isLoad = false;
       });
     }
   },
   computed: {
-    isAuth() {
-      return this.$store.state.isAuth
-    }
+    ...mapState({
+      isAuth: state => state.isAuth
+    })
   }
 }
+
 </script>
 
 <style scoped>
