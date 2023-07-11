@@ -110,6 +110,7 @@ export default {
     methods: {
         actionLogout() {
             this.$store.dispatch('logout').then(() => {
+                this.$root.showToast('success', 'Berhasil Logout!');
                 if (!this.isAuth) {
                     this.$router.push('/');
                 }

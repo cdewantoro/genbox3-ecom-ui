@@ -5,7 +5,8 @@ export const store = createStore({
   state() {
     return {
       isAuth: typeof localStorage.tokenAccess !== "undefined",
-      token: localStorage.tokenAccess
+      token: localStorage.tokenAccess,
+      authMessage: ''
     };
   },
   mutations: {
@@ -26,14 +27,14 @@ export const store = createStore({
           const token = response.data.token;
           axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
           commit("login", token);
-          console.log(response.data.status);
+          this.state.authMessage = response.data.status;
         })
         .catch((e) => {
-          console.log(e.response.data.message);
+          this.state.authMessage = e.response.data.message;
         });
     },
     async logout({ commit }) {
-        axios
+        await axios
           .post("/logout")
           .then((response) => {
             const token = response.data.token;

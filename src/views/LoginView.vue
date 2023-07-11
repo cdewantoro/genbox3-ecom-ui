@@ -54,7 +54,10 @@ export default {
       console.log(this.isLoad);
       this.login(credentials).then(() => {
         if (this.isAuth) {
+          this.$root.showToast('success', 'Berhasil Login!');
           this.$router.push('/');
+        } else {
+          this.$root.showToast('error', this.authMessage);
         }
         this.isLoad = false;
       });
@@ -62,7 +65,8 @@ export default {
   },
   computed: {
     ...mapState({
-      isAuth: state => state.isAuth
+      isAuth: state => state.isAuth,
+      authMessage: state => state.authMessage
     })
   }
 }

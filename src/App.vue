@@ -8,10 +8,21 @@
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import { createToaster } from "@meforma/vue-toaster";
+
 export default {
   components: {
     HeaderComponent,
     FooterComponent
+  },
+  methods: {
+    showToast(type, msg) {
+      const toaster = createToaster({
+        position: 'top-right',
+        type: type
+      });
+      toaster.show(msg);
+    }
   }
 }
 </script>
