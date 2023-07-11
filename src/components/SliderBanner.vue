@@ -14,7 +14,7 @@
                 <img src="@/assets/img/banner.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/collection/190727/1245x459" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/seed/picsum/1245/459" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
