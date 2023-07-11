@@ -11,8 +11,8 @@
           <span class="material-symbols-outlined fs-2 fw-bold">login</span> <span>Login</span>
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center h-75 mt-3">
-          <input class="fs-3 text-center text-secondary border-0" style="height: 50px; width: 80%;" type="text"
-            placeholder="Username" v-model="username">
+          <input class="fs-3 text-center text-secondary border-0" style="height: 50px; width: 80%;" type="email"
+            placeholder="Email" v-model="email">
           <hr>
           <input class="fs-3 text-center text-secondary border-0" style="height: 50px; width: 80%;" type="password"
             placeholder="Password" v-model="password">
@@ -39,15 +39,15 @@ export default {
   data() {
     return {
       isLoad: false,
-      username: 'admin',
-      password: '123',
+      email: '',
+      password: '',
     }
   },
   methods: {
     ...mapActions(['login']),
     actionLogin() {
       const credentials = {
-        email: this.username,
+        email: this.email,
         password: this.password
       };
       this.isLoad = true;

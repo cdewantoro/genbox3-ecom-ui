@@ -20,9 +20,19 @@ export const store = createStore({
     },
   },
   actions: {
+    async regis(context, data) {
+      await axios
+        .post("/register", data)
+        .then((response) => {
+          context.state.authMessage = response.data.message;
+        })
+        .catch((e) => {
+          context.state.authMessage = e.response.data.message;
+        });
+    },
     async login({ commit }, credentials) {
       await axios
-        .post("http://127.0.0.1:8000/api/login", credentials)
+        .post("/login", credentials)
         .then((response) => {
           const token = response.data.token;
           axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -39,6 +49,7 @@ export const store = createStore({
           .then((response) => {
             const token = response.data.token;
             commit("logout", token);
+            this.state.authMessage = response.data.message;
           })
           .catch((error) => {
             console.error(error);
